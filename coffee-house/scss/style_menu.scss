@@ -1,0 +1,431 @@
+@import "./variables";
+@import "./common.scss";
+@import "./headerFooter.scss";
+.coffee_title {
+  text-align: left;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  color: rgb(64, 63, 61);
+}
+@media (max-width: $mobile) {
+  .coffee_title {
+    font-size: 32px;
+  }
+}
+.coffee_title span {
+  color: rgb(176, 144, 122);
+  font-style: italic;
+}
+.menu_menu_btn {
+  background-color: $background-body;
+  border: none;
+  border-bottom: 2px solid #403f3d;
+  color: $text-dark;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+.menu_as_wrapper_coffe,
+.menu_as_wrapper_tea,
+.menu_as_wrapper_dessert {
+  display: none;
+}
+.menu_as_wrapper_active {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.menu_as_assortiment {
+  display: flex;
+  flex-direction: column;
+}
+.menu_as_assortiment .coffee_title {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  @media (max-width: $screen-small) {
+    width: 100%;
+  }
+}
+
+.menu_as_btns {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  color: $text-dark;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+}
+.menu_as_btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 100px;
+  border: 1px solid $border-light;
+  background-color: $background-body;
+  height: 46px;
+  color: $text-dark;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%; /* 24px */
+}
+.menu_as_btn_active {
+  color: $text-light;
+  background: $background-container;
+  pointer-events: none;
+}
+.menu_as_btn_coffe {
+  width: 115px;
+  transition: all ease-in-out 0.3s;
+}
+.menu_as_btn_tea {
+  width: 90px;
+  transition: all ease-in-out 0.3s;
+}
+.menu_as_btn_dessert {
+  width: 124px;
+  transition: all ease-in-out 0.3s;
+}
+.menu_as_btn_coffe:hover,
+.menu_as_btn_tea:hover,
+.menu_as_btn_dessert:hover {
+  @media (hover: hover) {
+    color: $text-light;
+    background: $background-container;
+    cursor: pointer;
+  }
+}
+.menu_as_btn_wrap_img {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background: $border-light;
+  display: flex;
+  padding: 3px 7px;
+  justify-content: center;
+  align-items: center;
+}
+.menu_as_btn_wrap_img_coffe {
+  background: $background-body;
+}
+.menu_as_wrapper_assortiment {
+  margin-top: 40px;
+}
+.menu_as_card {
+  display: flex;
+  height: 506px;
+  width: 310px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 40px;
+  border: 1px solid $border-light;
+  @media (max-width: $tablet) {
+    display: none;
+  }
+
+  &_refresh {
+    display: none;
+
+    @media (max-width: $tablet) {
+      display: flex;
+      width: 60px;
+      height: 60px;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(225, 212, 201);
+      border-radius: 100px;
+      border: 1px solid rgb(102, 95, 85);
+    }
+    @media (max-width: $tablet) {
+      display: block;
+      margin: 40px auto 0;
+      &:hover {
+        @media (hover: hover) {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.d-none {
+  display: none;
+}
+.visible {
+  @media (max-width: $tablet) {
+    display: flex;
+  }
+}
+.menu_as_card_wrapper_img {
+  width: 310px;
+  height: 310px;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu_as_card_img {
+  transition: linear 0.3s;
+}
+.menu_as_card:hover {
+  @media (hover: hover) {
+    cursor: pointer;
+  }
+}
+.menu_as_card:hover .menu_as_card_img {
+  @media (hover: hover) {
+    transform: scale(0.95);
+  }
+}
+.menu_as_card_wrapper_text {
+  /* margin: 0 auto; */
+  padding: 20px;
+}
+.menu_as_card_title {
+  color: $text-dark;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 116%; /* 30px */
+}
+.menu_as_card_subtitle {
+  height: 72px;
+  margin-top: 12px;
+  color: $text-dark;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.menu_as_card_price {
+  margin-top: 12px;
+  color: $text-dark;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+/* modals */
+
+.modals {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  &.modals_active {
+    display: block;
+  }
+}
+.modal_cofee {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 10px;
+  display: flex;
+  width: 800px;
+  height: 504px;
+  padding: 16px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 40px;
+  background: $background-body;
+  gap: 20px;
+  @media (max-width: $screen-small) {
+    width: 750px;
+    height: auto;
+  }
+  @media (max-width: $tablet) {
+    max-width: 94%;
+  }
+  @media (max-width: $mobile) {
+    width: 342px;
+  }
+}
+
+.modal_img,
+.modal_img1 {
+  width: 310px;
+  height: 310px;
+  border-radius: 40px;
+  overflow: hidden;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+.modal_img1 img {
+  @media (max-width: $tablet) {
+    width: 310px;
+    height: 310px;
+  }
+}
+.modal_text {
+  display: flex;
+  flex-direction: column;
+  width: 438px;
+  @media (max-width: $tablet) {
+    width: 326px;
+  }
+  @media (max-width: $mobile) {
+    width: 310px;
+  }
+}
+.modal_title {
+  color: $text-dark;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.modal_subtitle {
+  color: $text-dark;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.modal_size,
+.modal_additives {
+  margin-top: 20px;
+}
+.modal_subtitle {
+  margin-top: 12px;
+}
+.modal_btns_size,
+.modal_btns_additives {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.modal_btn_size,
+.modal_btn_additives {
+  display: flex;
+  height: 46px;
+  flex-direction: row;
+  gap: 8px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  color: $text-dark;
+  background-color: $background-body;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  border: 1px solid $border-light;
+  &.modal_btn_active {
+    color: $text-light;
+    background: $background-container;
+    &:hover {
+      cursor: default;
+    }
+    & .modal_circle {
+      color: $text-dark;
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: $text-light;
+      background: $background-container;
+      cursor: pointer;
+      & .modal_circle {
+        color: $text-dark;
+      }
+    }
+  }
+}
+.modal_circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  background: $border-light;
+  display: flex;
+  padding: 3px 7px;
+  justify-content: center;
+  align-items: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+.modal_total {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $text-dark;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.modal_note {
+  border-top: 1px solid var(--border-light, #c1b6ad);
+  padding: 12px 8px;
+  color: $text-dark;
+  font-family: Inter;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+}
+.modal_close {
+  margin-top: 20px;
+  width: 438px;
+  height: 44px;
+  border-radius: 100px;
+  border: 1px solid $border-dark;
+  color: $text-dark;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  background-color: $background-body;
+  &:hover {
+    @media (hover: hover) {
+      color: $text-light;
+      background: $background-container;
+      cursor: pointer;
+    }
+  }
+  @media (max-width: $tablet) {
+    width: 326px;
+  }
+  @media (max-width: $tablet) {
+    width: 310px;
+  }
+}
