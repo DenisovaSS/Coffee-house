@@ -25,8 +25,8 @@ The task consists of three parts:
   - In this part of the task, we use JavaScript to add interactivity to the pages;
   - The implemented functionality is being checked.
 
-The duration of each part of the task is 1 week.  
-The form of evaluation for each part of the task is a cross-check review.
-
 [Design in Figma](https://www.figma.com/file/SAoBmuOqTfguehdT4IFRxQ/Coffee-House?type=design&node-id=0-1&mode=design&t=qis81E9Ovgx47eVl-0)
 
+# Finally
+
+[Deploy link]( https://denisovass.github.io/Coffee-house/coffee-house/)
